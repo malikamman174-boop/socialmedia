@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>social media</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- EmailJS Script -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("4roXGUvLMNoZneRgk"); // آپ کی Public Key
+    })();
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; background:#f5f6fa; }
+
+    .navbar { background:#1a1a1a; }
+    .navbar-brand,.nav-link { color:white !important; font-weight:500; }
+    .navbar-toggler { border:none; }
+    .navbar-toggler-icon-custom { font-size:2rem; color:white; }
+
+    .hero {
+      height:55vh;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?auto=format&fit=crop&w=1920&q=80') center/cover;
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      color:white; text-align:center; padding:20px;
+      border-bottom:4px solid #111;
+      margin-top:56px;
+    }
+    .hero h1 { font-size:3rem; font-weight:700; text-shadow:0 0 10px black; letter-spacing:1px; }
+    .hero p { font-size:1.2rem; text-shadow:0 0 5px black; }
+
+    .dark-mode-toggle {
+      position: fixed; top: 70px; right: 20px; z-index: 1000;
+      background: rgba(255,255,255,0.9); border: none; border-radius: 50%;
+      width: 50px; height: 50px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+      transition: 0.3s;
+    }
+    .dark-mode-toggle:hover { transform: scale(1.1); }
+
+    body.dark-mode { background: #1a1a1a; color: #fff; }
+    body.dark-mode .service-card { background: #2d2d2d; color: #fff; }
+    body.dark-mode .dark-mode-toggle { background: rgba(50,50,50,0.9); color: #ffd700; }
+    body.dark-mode .form-control { background:#2d2d2d; color:#fff; border-color:#444; }
+    body.dark-mode label { color:#fff; }
+
+    .service-card { border-radius:14px; box-shadow:0 2px 15px rgba(0,0,0,0.08); padding:25px; background:white; margin-bottom:20px; transition:0.3s; }
+    .service-card:hover { transform:translateY(-5px); box-shadow:0 4px 20px rgba(0,0,0,0.15); }
+    .service-card h4 { font-weight:600; margin-bottom:15px; }
+    .service-card ul li { font-size:1rem; line-height:1.8; }
+
+    footer { background:#1a1a1a; color:white; text-align:center; padding:15px; margin-top:40px; }
+  </style>
+</head>
+<body>
+
+<button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+  <i class="bi bi-moon-fill"></i>
+</button>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Shosha Market</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <i class="bi bi-list navbar-toggler-icon-custom"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Info</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <h1>social media</h1>
+  <p>Reliable social media and affiliate services for your business.</p>
+</section>
+
+<section id="about" class="container py-5">
+  <h2 class="text-center mb-4" style="font-weight:600;">About Us</h2>
+  <p class="text-center" style="font-size:1.1rem; line-height:1.8;">
+    We provide reliable and effective services tailored to your needs.  
+    Our work includes support for YouTube, TikTok, Facebook, Daraz, and AI Agent.  
+    We help you grow your online presence with smart strategies and budget-friendly plans.
+  </p>
+</section>
+
+<section id="services" class="container py-5">
+  <h2 class="text-center mb-4">Our Services</h2>
+
+  <div class="service-card">
+    <h4>YouTube Services</h4>
+    <ul>
+      <li>Channel setup and professional branding</li>
+      <li>Video SEO and improved search ranking</li>
+      <li>Strategies to increase watch time and subscribers</li>
+      <li>Thumbnails, titles, and data analysis services</li>
+    </ul>
+  </div>
+
+  <div class="service-card">
+    <h4>TikTok Services</h4>
+    <ul>
+      <li>Account setup and creative branding</li>
+      <li>Viral video ideas and trend-based content</li>
+      <li>Strategies to grow followers and views</li>
+      <li>Professional analytics and performance guidance</li>
+    </ul>
+  </div>
+
+  <div class="service-card">
+    <h4>Facebook Services</h4>
+    <ul>
+      <li>Page setup and complete professional branding</li>
+      <li>Posts, reels, and ads management</li>
+      <li>Audience growth and engagement improvement</li>
+      <li>Marketing strategy and page analysis</li>
+    </ul>
+  </div>
+
+  <div class="service-card">
+    <h4>Daraz Affiliate Services</h4>
+    <ul>
+      <li>Affiliate account setup and product linking</li>
+      <li>Commission optimization strategies</li>
+      <li>Marketing guidance to increase sales</li>
+      <li>Performance tracking and analytics</li>
+    </ul>
+  </div>
+
+  <div class="service-card">
+    <h4>AI Agent Services</h4>
+    <ul>
+      <li>AI-based chat and support setup</li>
+      <li>Automation of repetitive tasks</li>
+      <li>Personalized responses and user engagement</li>
+      <li>Analytics and optimization for better results</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="container py-5">
+  <h2 class="text-center mb-4">Contact</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form id="form">
+        <div class="mb-3"><label>Name</label><input type="text" name="name" class="form-control" required></div>
+        <div class="mb-3"><label>Email</label><input type="email" name="email" class="form-control" required></div>
+        <div class="mb-3"><label>Message</label><textarea name="message" class="form-control" rows="4" required></textarea></div>
+        <button type="submit" class="btn btn-dark w-100">Submit</button>
+      </form>
+      <p id="msg" class="text-center mt-2"></p>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 Shosha Market All Rights Reserved</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const msgElement = document.getElementById('msg');
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    msgElement.textContent = "Sending...";
+    msgElement.style.color = "#0d6efd";
+    submitBtn.disabled = true;
+
+    emailjs.sendForm('service_e5ckc0m', 'template_hgvimjs', this)
+      .then(function() {
+        msgElement.textContent = "✓ Message sent successfully!";
+        msgElement.style.color = "#28a745";
+        document.getElementById('form').reset();
+        submitBtn.disabled = false;
+        setTimeout(() => { msgElement.textContent = ""; }, 5000);
+      }, function(error) {
+        msgElement.textContent = "✗ Failed to send. Please try again.";
+        msgElement.style.color = "#dc3545";
+        submitBtn.disabled = false;
+        console.log('EmailJS Error:', error);
+      });
+  });
+
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+  const icon = darkModeToggle.querySelector('i');
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+  }
+  darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    icon.classList.toggle('bi-moon-fill');
+    icon.classList.toggle('bi-sun-fill');
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode') ? 'enabled' : null);
+  });
+</script>
+</body>
+</html>
